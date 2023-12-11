@@ -1,0 +1,425 @@
+@import "./header";
+@import "./mains";
+@import "./footer";
+@import "./Burger/burger";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #030303;
+
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Open Sans";
+
+  color: white;
+}
+
+.burger {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+
+  width: 86vw;
+}
+
+.car_container {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+  .introducion {
+    width: 45vw;
+  }
+
+  main .about_us .about_info {
+    font-size: 1em;
+  }
+
+  .car_data {
+    font-size: 1.2em;
+
+    gap: 2vh;
+  }
+
+  .car_introdusion {
+    height: 30vh;
+
+    .card_info {
+      gap: 5px;
+
+      & button {
+        width: 20vw;
+        height: 5vh;
+      }
+    }
+
+    img {
+      width: 55%;
+    }
+  }
+
+  .about_info {
+    & p,
+    li {
+      font-size: 0.8em;
+    }
+  }
+
+  .buttons a {
+    width: 13vw;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+  header nav .nav_interface {
+    gap: 2vw;
+  }
+
+  .header_content {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+  header .buttons a {
+    width: 20vw;
+  }
+
+  header .introducion {
+    width: 80%;
+  }
+
+  .nav_interface p {
+    font-size: 0.8em;
+  }
+
+  main .about_us .about_info {
+    font-size: 0.8em;
+  }
+
+  main .title {
+    font-size: 1.4em;
+  }
+
+  main .models {
+    transition: 0.3s;
+
+    flex-wrap: wrap;
+
+    gap: 2vh;
+
+    & .model {
+      width: 86vw;
+    }
+  }
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+  .car_introdusion {
+    height: 45vh;
+
+    & img {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 500px) and (min-width: 400px) {
+  .car_introdusion {
+    height: 38vh;
+
+    & img {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 400px) and (min-width: 0px) {
+  .car_introdusion {
+    height: 28vh;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) and (min-width: 0px) {
+  .header_main {
+    background: url("../assets/phone.jpg");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .search_field {
+    display: none;
+  }
+
+  .about {
+    & h1 {
+      font-size: 1.6em;
+    }
+
+    & h2 {
+      font-size: 1.2em;
+    }
+  }
+
+  .header_content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .full_car_info {
+    flex-direction: column;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .car_data {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 2vh;
+
+    margin-top: 2vh;
+
+    font-size: 1em;
+
+    & p {
+      width: 45%;
+    }
+
+    & button {
+      width: 100%;
+
+      & svg {
+        height: 5vh;
+        width: 5vh;
+      }
+    }
+  }
+
+  .best_cars {
+    flex-direction: column;
+  }
+
+  .car_introdusion {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 0.9em;
+    font-weight: 400;
+
+    .card_info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+
+      gap: 5px;
+
+      & button {
+        width: 20vw;
+        height: 4vh;
+      }
+    }
+
+    & img {
+      height: 80%;
+    }
+  }
+
+  .to_hide {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  header .buttons a {
+    width: 30vw;
+  }
+
+  header .introducion {
+    width: 90%;
+  }
+
+  .nav_interface {
+    & a,
+    svg:not(.burger) {
+      display: none;
+    }
+  }
+
+  main.container .about_us {
+    flex-direction: column-reverse;
+
+    gap: 10px;
+
+    & img {
+      display: none;
+    }
+
+    & .about_info {
+      gap: 10px;
+
+      width: 100%;
+
+      font-size: 0.8em !important;
+    }
+  }
+
+  main.container .title {
+    font-size: 1.6em;
+
+    margin: 0;
+  }
+
+  main.container .models {
+    flex-direction: column;
+
+    & .model {
+      width: 100%;
+
+      & .model_info a {
+        width: 20vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+  header nav .nav_interface {
+    & .logo {
+      font-size: 0.9em;
+
+      & img {
+        width: 10vw;
+      }
+    }
+
+    & .interface {
+      font-size: 0.8em;
+    }
+
+    & .profile {
+      width: 10vw;
+    }
+  }
+
+  main {
+    margin-top: 2vh;
+  }
+
+  main .about_us .about_info {
+    font-size: 0.6em;
+  }
+
+  main .models {
+    transition: 0.3s;
+
+    flex-wrap: wrap;
+
+    gap: 2vh;
+
+    & .model {
+      width: 86vw;
+
+      & .model_info button {
+        align-items: center;
+        width: 25vw;
+        height: 4vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) and (min-width: 100px) {
+  nav {
+    height: 8vh;
+  }
+
+  footer {
+    margin-top: 0;
+
+    & h2 {
+      font-size: 1em;
+    }
+
+    p {
+      font-size: 0.6em;
+    }
+  }
+
+  nav .nav_interface {
+    height: 8vh;
+
+    & .logo {
+      font-size: 0.7em;
+
+      & img {
+        width: 8vw;
+      }
+    }
+
+    & .interface {
+      font-size: 0.6em;
+    }
+
+    & .profile {
+      width: 8vw;
+    }
+  }
+
+  header .buttons a {
+    width: 30vw;
+  }
+
+  main {
+    margin-top: 2vh;
+
+    & .title {
+      font-size: 1.2em;
+    }
+  }
+
+  main .about_us .about_info {
+    font-size: 0.6em;
+  }
+}

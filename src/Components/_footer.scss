@@ -1,0 +1,47 @@
+footer.container {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 5vh;
+
+  height: 15vh;
+
+  overflow: hidden;
+}
+
+.contacts {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  & h2 {
+    margin: 0;
+
+    font-weight: 600;
+    text-align: center;
+
+    color: #f20530;
+  }
+}
+
+.hrefs {
+  display: flex;
+
+  justify-content: space-between;
+
+  & svg {
+    height: 5vh;
+    width: 5vh;
+
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+
+      scale: 1.1;
+    }
+  }
+}
